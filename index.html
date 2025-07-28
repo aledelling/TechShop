@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechShop | Tienda para Programadores</title>
+  <meta name="description" content="Tienda ecommerce futurista para desarrolladores. Catálogo, carrito y productos tecnológicos para programadores.">
+  <meta name="keywords" content="Tienda, Ecommerce, SPA, Programadores, Tecnología, Carrito, Catálogo, Landing page">
+  <meta name="author" content="Jhon Alejandro Diaz J.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#" class="logo">TechShop</a>
+      <ul>
+        <li><a href="#" data-view="landing" class="nav-link active">Inicio</a></li>
+        <li><a href="#" data-view="catalogo" class="nav-link">Catálogo</a></li>
+        <li><a href="#" data-view="carrito" class="nav-link">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Landing Page -->
+    <section id="landing">
+        <div class="hero-content">
+          <!-- Columna izquierda -->
+          <div class="left-column">
+            <h1>
+              Tu Tienda Online para Programadores
+            </h1>
+            <p class="hero-sub">
+              Descubre el <strong>mejor catálogo de hardware y periféricos</strong> para tu setup. Compra con confianza productos diseñados para tu productividad, confort y pasión por el código.
+            </p>
+            <ul class="usp-list">
+              <li>🚚 <b>Envío rápido y seguro</b> a todo el país</li>
+              <li>💻 <b>Todo para tu espacio de programación</b></li>
+              <li>🛒 <b>Carrito dinámico y pago fácil</b> en segundos</li>
+              <li>🧾 <b>Factura transparente</b> y soporte proactivo</li>
+              <li>🔒 <b>Compra segura</b> con garantía real</li>
+            </ul>
+            <div class="cta-area">
+              <button class="btn-comprar" id="irCatalogoBtn">Explorar Catálogo</button>
+            </div>
+          </div>
+          <!-- Columna derecha con mockup -->
+          <div class="right-column right-visual">
+            <!-- Mockup visual/ilustración de setup -->
+            <div class="setup-mockup">
+              <img src="static/dev-setup-illustration.svg" alt="Ilustración de Setup de Programador" />
+            </div>
+            <h2>¿Por qué elegir TechShop?</h2>
+            <p>
+              Somos programadores seleccionando lo mejor: <strong>aumenta tu rendimiento</strong>, <strong>cuida tu salud</strong> y <strong>optimizan tu pasión por el desarrollo</strong>.
+            </p>
+            <p>
+              <b>🛠 Directo para devs:</b> Ahorra tiempo navegando en marketplaces genéricos. Aquí encuentras solo lo esencial.<br>
+              <b>⚡ Fácil, seguro y rápido:</b> Carrito intuitivo, decisión de domicilio y pago sin complicaciones.<br>
+              <b>🤝 Confianza y comunidad:</b> Miles de clientes felices ya optimizaron su entorno.
+            </p>
+          </div>          
+        </div>
+      </section>      
+
+    <!-- Catálogo de productos -->
+    <section id="catalogo" style="display:none;">
+        <h2>Catálogo de Productos</h2>
+        <div class="productos-grid">
+          <!-- Las tarjetas de productos se inyectan por JS -->
+        </div>
+      </section>
+          <!-- Catálogo de productos -->
+    <!-- Carrito de compras -->
+    <section id="carrito" style="display:none;">
+      <h2>Carrito de Compras</h2>
+      <div id="cart-items"></div>
+      <div id="cart-totals">
+        <p>Subtotal: $<span id="subtotal">0</span></p>
+        <p>IVA (19%): $<span id="iva">0</span></p>
+        <p>Total: $<span id="total">0</span></p>
+      </div>
+      <div id="pago-section">
+        <label for="pago">¿Con cuánto pagas?</label>
+        <input type="number" id="pago" min="0" step="1000">
+        <button type="button" id="btn-cambio">Calcular cambio</button>
+        <div id="cambio"></div>
+      </div>
+      <div id="domicilio-section">
+        <input type="checkbox" id="domicilio">
+        <label for="domicilio">¿Deseas domicilio?</label>
+        <div id="form-domicilio" style="display:none;">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" maxlength="80">
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" maxlength="100">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" maxlength="15">
+        </div>
+      </div>
+      <button type="button" id="btn-factura">Generar Factura</button>
+    </section>
+
+    <!-- Sección de factura generada dinámicamente -->
+    <section id="factura" style="display:none;">
+      <!-- Sección para mostrar la factura por JS -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-cards">
+        
+        <!-- Tarjeta 1: TechShop -->
+        <div class="footer-card footer-info">
+          <strong>TechShop</strong>
+          <span class="footer-slogan">Tu Tienda Online para Programadores</span>
+          <p>
+            Potencia tu setup, aumenta tu productividad. Tecnología, periféricos y accesorios seleccionados solo para devs y amantes del código.
+          </p>
+        </div>
+        
+        <!-- Tarjeta 2: Contacto -->
+        <div class="footer-card footer-contact">
+          <h3>Contacto</h3>
+          <p>Jhon Alejandro Diaz J.</p>
+          <p>Email: <a href="mailto:contacto@techshop.com" class="footer-link">contacto@techshop.com</a></p>
+          <p>WhatsApp: <a href="https://wa.me/573001234567" class="footer-link" target="_blank">+57 300 123 4567</a></p>
+          <p>Bogotá, Colombia</p>
+          <div class="footer-social">
+            <a href="https://twitter.com/yourprofile" target="_blank" class="footer-social-btn twitter" title="Twitter"><span aria-hidden="true">🐦</span></a>
+            <a href="https://github.com/yourprofile" target="_blank" class="footer-social-btn github" title="GitHub"><span aria-hidden="true">💻</span></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="footer-social-btn linkedin" title="LinkedIn"><span aria-hidden="true">🔗</span></a>
+            <a href="https://instagram.com/yourprofile" target="_blank" class="footer-social-btn instagram" title="Instagram"><span aria-hidden="true">📸</span></a>
+          </div>
+        </div>
+        
+        <!-- Tarjeta 3: Soporte y Ayuda -->
+        <div class="footer-card footer-support">
+          <h3>Soporte y Ayuda</h3>
+          <nav>
+            <a href="#faq" class="footer-link">Preguntas Frecuentes</a>
+            <a href="#privacidad" class="footer-link">Política de Privacidad</a>
+            <a href="#terminos" class="footer-link">Términos y Condiciones</a>
+            <a href="#contacto" class="footer-link">Contáctanos</a>
+            <a href="#envios" class="footer-link">Envíos y Devoluciones</a>
+          </nav>
+        </div>
+        
+      </div>
+      <div class="footer-copy">
+        <p>© 2025 TechShop. Desarrollado por Jhon Alejandro Diaz J. · Aspiring Back-end Developer.</p>
+        <p>
+          <small>Sitio para demo y práctica. Los productos, contactos y redes pueden ser ficticios.</small>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Script principal -->
+  <script src="static/js/app.js" defer></script>
+</body>
+</html>
