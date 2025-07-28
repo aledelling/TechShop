@@ -1,58 +1,75 @@
-# TechShop — Tienda Online para Programadores
-Bienvenido a TechShop, una plataforma web de comercio electrónico especializada en productos tecnológicos para desarrolladores de software y periféricos de setup enfocados en programadores.
 
-🚀 Descripción del Proyecto
-TechShop es una tienda online construida con HTML, CSS y JavaScript puro, que permite a los usuarios navegar un catálogo de al menos 10 productos, añadirlos a un carrito de compras, calcular el total con IVA, gestionar pagos y generar facturas. Incluye, además, la opción de compra con domicilio con formulario recogiendo datos del cliente.
+# 🛒 TechShop — Tienda Online para Programadores
 
-⚙️ Funcionalidades Destacadas
-Catálogo con tarjetas de producto: Imágenes, descripciones, precios y botón Comprar.
+Bienvenido a **TechShop**, una plataforma web de comercio electrónico especializada en productos tecnológicos para desarrolladores de software y periféricos de setup enfocados en programadores.
 
-Carrito de compras dinámico: Añade, elimina y modifica cantidades de productos.
+---
 
-Cálculo automático: Subtotal, IVA (19%) y total.
+## 🚀 Descripción del Proyecto
 
-Simula el pago: Usuario ingresa cuánto paga, sistema calcula y desglosa el cambio (billetes y monedas).
+TechShop es una tienda online construida con **HTML**, **CSS** y **JavaScript puro**, que permite a los usuarios:
 
-Opción de domicilio: Si el cliente elige domicilio, aparece formulario para nombre, dirección y teléfono.
+- Navegar un catálogo de al menos 10 productos.
+- Añadir productos a un carrito de compras.
+- Calcular el total con **IVA del 19%**.
+- Simular pagos y generar facturas.
+- Ingresar datos para pedidos a domicilio mediante formulario.
 
-Factura detallada: Incluye datos del vendedor, cliente (si aplica), detalle de compra e impuestos.
+---
 
-Interfaz atractiva y responsiva: Optimizada para desktop y móvil.
+## ⚙️ Funcionalidades Destacadas
 
-Validaciones básicas: Para evitar cantidades negativas y campos vacíos en el formulario de domicilio.
+- 📦 **Catálogo con tarjetas de producto:** imágenes, descripciones, precios y botón "Comprar".
+- 🛒 **Carrito de compras dinámico:** añade, elimina y modifica cantidades.
+- 🧮 **Cálculo automático:** subtotal, IVA (19%) y total.
+- 💵 **Simulación de pago:** ingreso de pago, cálculo de cambio con desglose de billetes y monedas.
+- 🚚 **Opción de domicilio:** formulario con nombre, dirección y teléfono.
+- 🧾 **Factura detallada:** con datos del vendedor, cliente (si aplica), detalle de compra e impuestos.
+- 📱 **Interfaz atractiva y responsiva:** compatible con dispositivos móviles.
+- ✅ **Validaciones básicas:** para evitar errores como campos vacíos o cantidades inválidas.
 
-📦 Estructura del Proyecto
-text
+---
+
+## 📂 Estructura del Proyecto
+
+```
 techshop/
 │
 ├── index.html        # Página principal con catálogo y carrito
 ├── style.css         # Estilos principales
 ├── app.js            # Lógica y funcionalidades en JavaScript
 └── README.md         # Este documento
-🚩 Instalación y Uso
-Clona o descarga este repositorio.
+```
 
-Abre index.html en tu navegador preferido.
+---
 
-Explora los productos, agrégalos al carrito y realiza la simulación de compra.
+## 🚩 Instalación y Uso
 
-📝 ¿Cómo funciona?
-Agregar un producto: Haz clic en el botón "Comprar" de la tarjeta correspondiente.
+1. Clona o descarga este repositorio.
+2. Abre `index.html` en tu navegador preferido.
+3. Explora los productos, agrégalos al carrito y realiza la simulación de compra.
 
-Actualizar cantidad: En el carrito, usa los botones de “+” o “-” o escribe la cantidad.
+---
 
-Eliminar productos: Usa el botón de eliminar o vacía el carrito entero.
+## 📝 ¿Cómo funciona?
 
-Calcular cambio: Ingresa con cuánto pagas y haz clic para ver el desglose.
+- **Agregar un producto:** Haz clic en el botón "Comprar" de la tarjeta.
+- **Actualizar cantidad:** Usa los botones “+” o “-” o escribe la cantidad en el carrito.
+- **Eliminar productos:** Usa el botón de eliminar o vacía el carrito completo.
+- **Calcular cambio:** Ingresa el valor del pago y obtén el desglose.
+- **Pedido a domicilio:** Marca la casilla y completa el formulario.
+- **Generar factura:** Haz clic en “Generar Factura” para ver el resumen.
 
-Domicilio: Marca la casilla y llena el formulario si necesitas envío a domicilio.
+---
 
-Generar factura: Haz clic en “Generar Factura” para ver el resumen de tu compra.
+## 👤 Autor
 
+**Jhon Alejandro Diaz J.**  
+Aspiring Back-end Developer | Systems Technician Student  
+Apasionado por **Python**, **Java**, **JavaScript** | Aprendiendo **Flask**, **Spring Boot**, **Node.js**
 
-👤 Autor
-Jhon Alejandro Diaz J.
-Aspiring Back-end Developer | Systems Technician Student | Passionate about Python · Java · JavaScript | Learning Flask · Spring Boot · Node.js
+---
 
-📃 Licencia
-Solo para fines educativos o demostrativos. Puedes modificar y reutilizar libremente.
+## 📃 Licencia
+
+Uso exclusivo para fines **educativos o demostrativos**. Libre modificación y reutilización.
