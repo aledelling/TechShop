@@ -3,93 +3,93 @@
  * Autor: Jhon Alejandro Diaz J.
  */
 
-// ====== VARIABLES Y DATOS DE PRODUCTO (ejemplo base) ======
-const products = [
-  {
-    id: 1,
-    nombre: "Teclado Mecánico RGB",
-    descripcion: "Switches mecánicos, retroiluminación personalizable, ideal para programar durante horas.",
-    precio: 120,
-    img: "https://picsum.photos/300/200?random=1"
-  },
-  {
-    id: 2,
-    nombre: "Mouse Ergonómico Wireless",
-    descripcion: "6 botones programables, DPI ajustable, conexión USB y Bluetooth.",
-    precio: 95,
-    img: "https://picsum.photos/300/200?random=2"
-  },
-  {
-    id: 3,
-    nombre: "Monitor UltraWide 29\" IPS",
-    descripcion: "Pantalla IPS FHD, 29 pulgadas, ideal para multitarea y desarrollo.",
-    precio: 890,
-    img: "https://picsum.photos/300/200?random=3"
-  },
-  {
-    id: 4,
-    nombre: "Soporte para Portátil Ajustable",
-    descripcion: "Aluminio, 6 niveles de altura, mejora la ventilación de tu notebook.",
-    precio: 42,
-    img: "https://picsum.photos/300/200?random=4"
-  },
-  {
-    id: 5,
-    nombre: "Audífonos Inalámbricos Bluetooth",
-    descripcion: "Reducción de ruido activa, 40h batería, carga rápida USB-C.",
-    precio: 150,
-    img: "https://picsum.photos/300/200?random=5"
-  },
-  {
-    id: 6,
-    nombre: "Silla Ergonómica de Oficina",
-    descripcion: "Soporte lumbar, espaldar alto, ajustable, confort premium.",
-    precio: 540,
-    img: "https://picsum.photos/300/200?random=6"
-  },
-  {
-    id: 7,
-    nombre: "Alfombrilla Extendida",
-    descripcion: "Base antideslizante, extra grande, resistente al agua.",
-    precio: 34,
-    img: "https://picsum.photos/300/200?random=7"
-  },
-  {
-    id: 8,
-    nombre: "Lámpara LED con Brazo Flexible",
-    descripcion: "3 temperaturas de color, cargador USB incluido.",
-    precio: 61,
-    img: "https://picsum.photos/300/200?random=8"
-  },
-  {
-    id: 9,
-    nombre: "Hub USB 3.0 de 4 Puertos",
-    descripcion: "Transferencia rápida, tamaño compacto, ideal para portátiles.",
-    precio: 28,
-    img: "https://picsum.photos/300/200?random=9"
-  },
-  {
-    id: 10,
-    nombre: "Cojín Lumbar Viscoelástico",
-    descripcion: "Diseño ergonómico, mejora la postura en jornadas largas.",
-    precio: 25,
-    img: "https://picsum.photos/300/200?random=10"
-  },
-  {
-    id: 11,
-    nombre: "Micrófono Condensador USB",
-    descripcion: "Ideal para videollamadas, streaming y grabación de podcasts.",
-    precio: 79,
-    img: "https://picsum.photos/300/200?random=11"
-  },
-  {
-    id: 12,
-    nombre: "Kit de Limpieza para Electrónicos",
-    descripcion: "Incluye gel, paños y brochas. Limpia tu setup como nuevo.",
-    precio: 18,
-    img: "https://picsum.photos/300/200?random=12"
-  }
-];
+// ====== VARIABLES Y DATOS DE PRODUCTO ======
+  const products = [
+    {
+      id: 1,
+      nombre: "Teclado Mecánico RGB",
+      descripcion: "Switches mecánicos, retroiluminación personalizable, ideal para programar durante horas.",
+      precio: 120,
+      img: "https://picsum.photos/300/200?random=1"
+    },
+    {
+      id: 2,
+      nombre: "Mouse Ergonómico Wireless",
+      descripcion: "6 botones programables, DPI ajustable, conexión USB y Bluetooth.",
+      precio: 95,
+      img: "https://picsum.photos/300/200?random=2"
+    },
+    {
+      id: 3,
+      nombre: "Monitor UltraWide 29\" IPS",
+      descripcion: "Pantalla IPS FHD, 29 pulgadas, ideal para multitarea y desarrollo.",
+      precio: 890,
+      img: "https://picsum.photos/300/200?random=3"
+    },
+    {
+      id: 4,
+      nombre: "Soporte para Portátil Ajustable",
+      descripcion: "Aluminio, 6 niveles de altura, mejora la ventilación de tu notebook.",
+      precio: 42,
+      img: "https://picsum.photos/300/200?random=4"
+    },
+    {
+      id: 5,
+      nombre: "Audífonos Inalámbricos Bluetooth",
+      descripcion: "Reducción de ruido activa, 40h batería, carga rápida USB-C.",
+      precio: 150,
+      img: "https://picsum.photos/300/200?random=5"
+    },
+    {
+      id: 6,
+      nombre: "Silla Ergonómica de Oficina",
+      descripcion: "Soporte lumbar, espaldar alto, ajustable, confort premium.",
+      precio: 540,
+      img: "https://picsum.photos/300/200?random=6"
+    },
+    {
+      id: 7,
+      nombre: "Alfombrilla Extendida",
+      descripcion: "Base antideslizante, extra grande, resistente al agua.",
+      precio: 34,
+      img: "https://picsum.photos/300/200?random=7"
+    },
+    {
+      id: 8,
+      nombre: "Lámpara LED con Brazo Flexible",
+      descripcion: "3 temperaturas de color, cargador USB incluido.",
+      precio: 61,
+      img: "https://picsum.photos/300/200?random=8"
+    },
+    {
+      id: 9,
+      nombre: "Hub USB 3.0 de 4 Puertos",
+      descripcion: "Transferencia rápida, tamaño compacto, ideal para portátiles.",
+      precio: 28,
+      img: "https://picsum.photos/300/200?random=9"
+    },
+    {
+      id: 10,
+      nombre: "Cojín Lumbar Viscoelástico",
+      descripcion: "Diseño ergonómico, mejora la postura en jornadas largas.",
+      precio: 25,
+      img: "https://picsum.photos/300/200?random=10"
+    },
+    {
+      id: 11,
+      nombre: "Micrófono Condensador USB",
+      descripcion: "Ideal para videollamadas, streaming y grabación de podcasts.",
+      precio: 79,
+      img: "https://picsum.photos/300/200?random=11"
+    },
+    {
+      id: 12,
+      nombre: "Kit de Limpieza para Electrónicos",
+      descripcion: "Incluye gel, paños y brochas. Limpia tu setup como nuevo.",
+      precio: 18,
+      img: "https://picsum.photos/300/200?random=12"
+    }
+  ];
 
   // Captura de elementos DOM
   const productosGrid = document.querySelector(".productos-grid");
@@ -111,21 +111,43 @@ const products = [
   // ========== FUNCIONES PRINCIPALES ==========
   
     // Función para mostrar la vista deseada y ocultar las demás
-    function mostrarVista(vista) {
-      const secciones = ['landing', 'catalogo', 'carrito'];
+  function mostrarVista(vista) {
+    const secciones = ['landing', 'catalogo', 'carrito'];
       secciones.forEach(id => {
         document.getElementById(id).style.display = (id === vista) ? 'block' : 'none';
       });
       // Opcional: actualiza nav activo
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.toggle('active', link.getAttribute('data-view') === vista);
-      });
-    }
+    });
+  }    
     
   // Renderiza el catálogo de productos en la página
   function renderCatalogo() {
-    productosGrid.innerHTML = "";
-    products.forEach((product, idx) => {
+    const productosGrid = document.querySelector('.productos-grid');
+    productosGrid.innerHTML = '';
+    products.forEach((product) => {
+      // Checa si el producto ya está en el carrito
+      const itemCarrito = carrito.find(item => item.id === product.id);
+  
+      let controlsHTML = '';
+      if (!itemCarrito) {
+        // Si no hay unidades, solo el botón para añadir
+        controlsHTML = `
+          <button class="btn-comprar" onclick="addToCart(${product.id})">Añadir al carrito</button>
+        `;
+      } else {
+        // Si ya hay unidades, muestra el contador y botones +/-
+        controlsHTML = `
+          <div class="catalogo-controles">
+            <button class="btn-control" onclick="changeQty(${product.id}, -1)">-</button>
+            <span class="catalogo-cantidad">${itemCarrito.cantidad}</span>
+            <button class="btn-control" onclick="changeQty(${product.id}, 1)">+</button>
+          </div>
+        `;
+      }
+  
+      // La tarjeta del producto
       const card = document.createElement("article");
       card.className = "producto-card";
       card.innerHTML = `
@@ -133,28 +155,13 @@ const products = [
         <h3>${product.nombre}</h3>
         <p>${product.descripcion}</p>
         <span class="precio">$${product.precio.toLocaleString()}</span>
-        <button class="btn-comprar" onclick="addToCart(${product.id || idx})">Comprar</button>
+        ${controlsHTML}
       `;
       productosGrid.appendChild(card);
     });
   }
   
-  // Añade un producto al carrito
-  function addToCart(productId) {
-    const producto = products.find(p => p.id === productId);
-    if (!producto) return;
-    const item = carrito.find(p => p.id === productId);
-    if (item) {
-      item.cantidad += 1;
-    } else {
-      carrito.push({ ...producto, cantidad: 1 });
-    }
-    renderCarrito();
-  }
-  window.addToCart = addToCart; // Necesario si usas onclick en HTML
-  
-  
-  // Renderiza el carrito en pantalla
+    // Renderiza el carrito en pantalla
   function renderCarrito() {
     const cartItems = document.getElementById('cart-items');
     cartItems.innerHTML = '';
@@ -179,6 +186,21 @@ const products = [
     calcularTotales();
   }
   
+  // Añade un producto al carrito
+  function addToCart(productId) {
+    const producto = products.find(p => p.id === productId);
+    if (!producto) return;
+    const item = carrito.find(p => p.id === productId);
+    if (item) {
+      item.cantidad += 1;
+    } else {
+      carrito.push({ ...producto, cantidad: 1 });
+    }
+    renderCarrito();
+    renderCatalogo();
+  }
+  window.addToCart = addToCart; // Necesario si usas onclick en HTML
+  
   function changeQty(productId, change) {
     const item = carrito.find(p => p.id === productId);
     if (item) {
@@ -187,6 +209,7 @@ const products = [
         carrito = carrito.filter(p => p.id !== productId);
       }
       renderCarrito();
+      renderCatalogo();
     }
   }
   window.changeQty = changeQty;
@@ -194,6 +217,7 @@ const products = [
   function removeFromCart(productId) {
     carrito = carrito.filter(p => p.id !== productId);
     renderCarrito();
+    renderCatalogo();
   }
   window.removeFromCart = removeFromCart;
   
@@ -326,15 +350,7 @@ const products = [
   window.generarFactura = generarFactura;
   window.cerrarFactura = cerrarFactura;
   
-  // Asegúrate de llamar a generarFactura con el botón del carrito:
-  document.getElementById('btn-factura').addEventListener('click', generarFactura);
-  
-
-  
-  // ========= EVENTOS BÁSICOS =========
-  window.addEventListener("DOMContentLoaded", renderCatalogo);
-
-  document.getElementById('btn-cambio').addEventListener('click', calcularCambio);
+  //POR REVISAR ??????
   function calcularCambio() {
     const total = parseInt(document.getElementById('total').innerText.replace(/\./g, '')) || 0;
     const montoPagado = parseInt(document.getElementById('pago').value) || 0;
@@ -358,19 +374,8 @@ const products = [
     }
     document.getElementById('cambio').innerHTML = msg;
   }
- 
 
-// Muestra u oculta el formulario de domicilio según el checkbox
-domicilioCheckbox.addEventListener("change", () => {
-  formDomicilio.style.display = domicilioCheckbox.checked ? "block" : "none";
-});
-  // window.addEventListener("DOMContentLoaded", renderCatalogo);
-  // btnCambio.addEventListener("click", calcularCambio);
-  // btnFactura.addEventListener("click", generarFactura);
-  
-  // Añade más funciones y eventos según tu flujo y requerimientos
-
-  
+    // ========= EVENTOS BÁSICOS =========
   // Botón del landing para ir al catálogo:
   document.addEventListener('DOMContentLoaded', () => {
     const irCatalogoBtn = document.getElementById('irCatalogoBtn');
@@ -380,6 +385,17 @@ domicilioCheckbox.addEventListener("change", () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+  });
+
+  document.getElementById('btn-factura').addEventListener('click', generarFactura);
+  
+  window.addEventListener("DOMContentLoaded", renderCatalogo);
+
+  document.getElementById('btn-cambio').addEventListener('click', calcularCambio);
+ 
+  // Muestra u oculta el formulario de domicilio según el checkbox
+  domicilioCheckbox.addEventListener("change", () => {
+    formDomicilio.style.display = domicilioCheckbox.checked ? "block" : "none";
   });
 
   // Vincular los enlaces del nav para cambiar de vista
@@ -393,10 +409,5 @@ domicilioCheckbox.addEventListener("change", () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
-
-
-  // Nota: 
-  // Expande cada función, implementa manejo de persistencia (localStorage) y validaciones conforme avances.
-  // No olvides poblar el array de productos con al menos 10 objetos para iniciar el catálogo.
   
   

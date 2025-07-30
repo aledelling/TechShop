@@ -442,6 +442,43 @@ input[type="checkbox"] {
   accent-color: #4FD1C5;
 }
 
+.catalogo-controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 0.7em;
+}
+.btn-control {
+  background: #4FD1C5;
+  color: #23272F;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.18em;
+  width: 2.1em;
+  height: 2.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.14s, transform 0.1s;
+  cursor: pointer;
+  outline: none;
+}
+.btn-control:hover,
+.btn-control:focus {
+  background: #7F5FFF;
+  color: #E1E6F1;
+  transform: scale(1.08);
+}
+.catalogo-cantidad {
+  min-width: 2em;
+  text-align: center;
+  font-size: 1.12em;
+  color: #7F5FFF;
+  font-weight: 600;
+}
+
 /* 8. Footer */
 footer {
   background: linear-gradient(91deg, #23272F 80%, #1A202C 100%);
@@ -1120,3 +1157,4 @@ footer {
     flex-direction: column;
   }
 }
+
