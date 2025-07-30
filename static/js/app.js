@@ -9,84 +9,84 @@
       id: 1,
       nombre: "Teclado Mecánico RGB",
       descripcion: "Switches mecánicos, retroiluminación personalizable, ideal para programar durante horas.",
-      precio: 120,
+      precio: 120000,
       img: "https://picsum.photos/300/200?random=1"
     },
     {
       id: 2,
       nombre: "Mouse Ergonómico Wireless",
       descripcion: "6 botones programables, DPI ajustable, conexión USB y Bluetooth.",
-      precio: 95,
+      precio: 95000,
       img: "https://picsum.photos/300/200?random=2"
     },
     {
       id: 3,
       nombre: "Monitor UltraWide 29\" IPS",
       descripcion: "Pantalla IPS FHD, 29 pulgadas, ideal para multitarea y desarrollo.",
-      precio: 890,
+      precio: 890000,
       img: "https://picsum.photos/300/200?random=3"
     },
     {
       id: 4,
       nombre: "Soporte para Portátil Ajustable",
       descripcion: "Aluminio, 6 niveles de altura, mejora la ventilación de tu notebook.",
-      precio: 42,
+      precio: 42000,
       img: "https://picsum.photos/300/200?random=4"
     },
     {
       id: 5,
       nombre: "Audífonos Inalámbricos Bluetooth",
       descripcion: "Reducción de ruido activa, 40h batería, carga rápida USB-C.",
-      precio: 150,
+      precio: 150000,
       img: "https://picsum.photos/300/200?random=5"
     },
     {
       id: 6,
       nombre: "Silla Ergonómica de Oficina",
       descripcion: "Soporte lumbar, espaldar alto, ajustable, confort premium.",
-      precio: 540,
+      precio: 540000,
       img: "https://picsum.photos/300/200?random=6"
     },
     {
       id: 7,
       nombre: "Alfombrilla Extendida",
       descripcion: "Base antideslizante, extra grande, resistente al agua.",
-      precio: 34,
+      precio: 34000,
       img: "https://picsum.photos/300/200?random=7"
     },
     {
       id: 8,
       nombre: "Lámpara LED con Brazo Flexible",
       descripcion: "3 temperaturas de color, cargador USB incluido.",
-      precio: 61,
+      precio: 61000,
       img: "https://picsum.photos/300/200?random=8"
     },
     {
       id: 9,
       nombre: "Hub USB 3.0 de 4 Puertos",
       descripcion: "Transferencia rápida, tamaño compacto, ideal para portátiles.",
-      precio: 28,
+      precio: 28000,
       img: "https://picsum.photos/300/200?random=9"
     },
     {
       id: 10,
       nombre: "Cojín Lumbar Viscoelástico",
       descripcion: "Diseño ergonómico, mejora la postura en jornadas largas.",
-      precio: 25,
+      precio: 25000,
       img: "https://picsum.photos/300/200?random=10"
     },
     {
       id: 11,
       nombre: "Micrófono Condensador USB",
       descripcion: "Ideal para videollamadas, streaming y grabación de podcasts.",
-      precio: 79,
+      precio: 79000,
       img: "https://picsum.photos/300/200?random=11"
     },
     {
       id: 12,
       nombre: "Kit de Limpieza para Electrónicos",
       descripcion: "Incluye gel, paños y brochas. Limpia tu setup como nuevo.",
-      precio: 18,
+      precio: 18000,
       img: "https://picsum.photos/300/200?random=12"
     }
   ];
@@ -234,31 +234,51 @@
   
   // Maneja el cálculo de cambio con billetes/monedas de denominaciones comunes COP
   function calcularCambio() {
-    const total = parseInt(document.getElementById('total').innerText.replace(/\./g, '')) || 0;
-    const pago = parseInt(document.getElementById('pago').value) || 0;
+    const subtotal = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+    const iva = Math.round(subtotal * 0.19);
+    const total = subtotal + iva;
+  
+    const pagoInput = document.getElementById('pago').value.trim();
+    function convertirStringANumero(str) {
+      const soloDigitos = str.replace(/[^0-9]/g, '');
+      return parseInt(soloDigitos, 10) || 0;
+    }
+  
+    const pago = convertirStringANumero(pagoInput);
     let cambio = pago - total;
     let msg = '';
-
-    if (total === 0) {
+  
+    if (subtotal === 0) {
       msg = '<span style="color:#f43f5e;">Agrega productos y calcula el total antes de pagar.</span>';
     } else if (cambio < 0) {
       msg = '<span style="color:#f43f5e;">Falta dinero para completar el pago.</span>';
     } else {
-      msg = `Cambio: <b>$${cambio.toLocaleString()}</b>`;
-      // Desglose de billetes y monedas (COP)
-      const denominaciones = [50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 10, 5, 1];
+      msg = `<div class="cambio-resumen"><span class="cambio-monto">Cambio:</span> <b>$${cambio.toLocaleString()}</b></div>`;
+      // Estructura en tabla
+      const denominaciones = [50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50];
       let desglose = [];
+      let resto = cambio;
       for (const den of denominaciones) {
-        if (cambio >= den) {
-          const cantidad = Math.floor(cambio / den);
-          if (cantidad > 0) desglose.push(`${cantidad} x $${den.toLocaleString()}`);
-          cambio = cambio % den;
+        const cantidad = Math.floor(resto / den);
+        if (cantidad > 0) {
+          desglose.push({ den, cantidad });
+          resto %= den;
         }
       }
-      if (desglose.length) msg += '<br><span style="font-size:0.98em;color:#4664b6;">Desglose: ' + desglose.join(', ') + '</span>';
+      if (desglose.length > 0) {
+        msg += `<div class="cambio-desglose">
+          <span class="cambio-label">Desglose de billetes/monedas:</span>
+          <table class="tabla-desglose">
+            <thead><tr><th>Denominación</th><th>Cantidad</th></tr></thead>
+            <tbody>
+              ${desglose.map(d => `<tr><td>$${d.den.toLocaleString()}</td><td>${d.cantidad}</td></tr>`).join('')}
+            </tbody>
+          </table>
+        </div>`;
+      }
     }
     document.getElementById('cambio').innerHTML = msg;
-  }
+  }  
   
   // Generar y mostrar la factura
   function generarFactura() {
@@ -350,31 +370,6 @@
   window.generarFactura = generarFactura;
   window.cerrarFactura = cerrarFactura;
   
-  //POR REVISAR ??????
-  function calcularCambio() {
-    const total = parseInt(document.getElementById('total').innerText.replace(/\./g, '')) || 0;
-    const montoPagado = parseInt(document.getElementById('pago').value) || 0;
-    let cambio = montoPagado - total;
-    let msg = '';
-    if (cambio < 0) {
-      msg = '<span style="color:#f43f5e;">Falta dinero para completar el pago.</span>';
-    } else {
-      msg = `Cambio: <b>$${cambio.toLocaleString()}</b>`;
-      // (opcional) Desglose en billetes/monedas
-      const valores = [50000,20000,10000,5000,2000,1000,500,200,100,50];
-      let desglose = [];
-      for (const val of valores) {
-        if (cambio >= val) {
-          const c = Math.floor(cambio / val);
-          if (c > 0) desglose.push(`${c} x $${val.toLocaleString()}`);
-          cambio %= val;
-        }
-      }
-      if (desglose.length) msg += '<br>Desglose: ' + desglose.join(', ');
-    }
-    document.getElementById('cambio').innerHTML = msg;
-  }
-
     // ========= EVENTOS BÁSICOS =========
   // Botón del landing para ir al catálogo:
   document.addEventListener('DOMContentLoaded', () => {

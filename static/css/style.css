@@ -1158,3 +1158,60 @@ footer {
   }
 }
 
+.cambio-resumen {
+  margin-bottom: 0.6em;
+  font-size: 1.19em;
+  color: #4FD1C5;
+  font-weight: 700;
+  background: #223144;
+  display: inline-block;
+  padding: 0.25em 1.1em;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px #7F5FFF22;
+}
+.cambio-monto { color: #7F5FFF; margin-right: 0.33em; }
+
+.cambio-desglose {
+  background: #1E2430;
+  padding: 0.7em 1.1em;
+  border-radius: 9px;
+  margin-top: 0.6em;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px #4FD1C526;
+  display: inline-block;
+}
+
+.cambio-label {
+  display: block;
+  font-size: 1.05em;
+  margin-bottom: 0.53em;
+  color: #A0AEC0;
+  font-weight: 600;
+}
+
+.tabla-desglose {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+  font-size: 1em;
+}
+.tabla-desglose th, .tabla-desglose td {
+  border-bottom: 1px solid #253351;
+  padding: 0.32em 0.7em;
+  text-align: center;
+}
+.tabla-desglose th {
+  color: #4FD1C5;
+  font-size: 0.99em;
+  font-weight: 700;
+  background: #212742;
+}
+.tabla-desglose td {
+  color: #E1E6F1;
+  font-weight: 500;
+}
+.tabla-desglose tr:last-child td {
+  border-bottom: none;
+}
+
+
