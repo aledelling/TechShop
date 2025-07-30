@@ -185,6 +185,12 @@
     }
     calcularTotales();
   }
+
+  function actualizarCarritoNav() {
+    // Suma la cantidad total de unidades en el carrito
+    const cantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+    document.getElementById('carrito-cantidad-indicador').innerText = cantidad;
+  }
   
   // Añade un producto al carrito
   function addToCart(productId) {
@@ -198,6 +204,7 @@
     }
     renderCarrito();
     renderCatalogo();
+    actualizarCarritoNav();
   }
   window.addToCart = addToCart; // Necesario si usas onclick en HTML
   
@@ -404,5 +411,29 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+
+  let lastScroll = 0;
+  const header = document.querySelector('header');
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+    if (currentScroll <= 0) {
+      header.style.top = '0';
+      return;
+    }
+  
+    if (currentScroll > lastScroll) {
+      // Scroll hacia abajo -> oculta navbar
+      header.style.top = '-80px'; // ajusta según altura del navbar
+    } else {
+      // Scroll hacia arriba -> muestra navbar
+      header.style.top = '0';
+    }
+    
+    lastScroll = currentScroll;
+  });
+  
+  
   
   
