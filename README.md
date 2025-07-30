@@ -30,19 +30,6 @@ TechShop es una tienda online construida con **HTML**, **CSS** y **JavaScript pu
 
 ---
 
-## 📂 Estructura del Proyecto
-
-```
-techshop/
-│
-├── index.html        # Página principal con catálogo y carrito
-├── style.css         # Estilos principales
-├── app.js            # Lógica y funcionalidades en JavaScript
-└── README.md         # Este documento
-```
-
----
-
 ## 🚩 Instalación y Uso
 
 1. Clona o descarga este repositorio.
